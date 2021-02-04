@@ -1,0 +1,34 @@
+{% load static %}
+<html>
+  
+  <head>
+    <title>Chat | ネットワークシステム</title>  
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Carter+One|Kosugi+Maru' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/class.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">   
+  </head>
+  
+  <body>
+    <div class="page-header">
+      <a href="/" class="move_top">
+	<div>トップ画面へ</div>
+      </a>
+      <p class="title">Umeco<span style="font-size:25px; font-family:'Kosugi Maru'"> 〜オンライン授業をサポート〜</span></p>   
+    </div>
+
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+	  <h1><a href="{% url 'chat_top' %}">Chat</a></h1>
+	  <h2><a href="{% url 'chat_list' %}">ネットワークシステム</a></h2>
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,70 @@
+{% extends 'blog/base_chat.html' %}
+{% block content %}
+
+<a href="{% url 'index' %}" class="back">
+  戻る
+</a>
+
+<h1>Chat</a></h1>
+
+<div class="chat">
+  <h2>Monday</h2>
+  {% for post in post %}
+  {% if post.regi == "1" %}
+  <a href="{% url 'chat_list' pk=post.pk %}">
+    <div class="chat_box">
+      {{ post.title }}
+    </div>
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+<div class="chat">
+  <h2>Tuesday</h2>
+  {% for post2 in post2 %}
+  {% if post2.regi == "1" %}
+  <a href="{% url 'chat_list' pk=post2.pk %}">
+    <div class="chat_box">
+      {{ post2.title }}
+    </div>
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+<div class="chat">
+  <h2>Wednesday</h2>
+  {% for post3 in post3 %}
+  {% if post3.regi == "1" %}
+  <a href="{% url 'chat_list' pk=post3.pk %}">
+    <div class="chat_box">
+      {{ post3.title }}
+    </div>
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+<div class="chat">
+  <h2>Thursday</h2>
+  {% for post4 in post4 %}
+  {% if post4.regi == "1" %}
+  <a href="{% url 'chat_list' pk=post4.pk %}">
+    <div class="chat_box">
+      {{ post4.title }}
+    </div>
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+<div class="chat">
+  <h2>Friday</h2>
+  {% for post5 in post5 %}
+  {% if post5.regi == "1" %}
+  <a href="{% url 'chat_list' pk=post5.pk %}">
+    <div class="chat_box">
+      {{ post5.title }}
+    </div>
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<a href="{% url 'today_detail' pk=post.pk %}" class="back">
+  戻る
+</a>
+<div class="post">
+  <h2>{{post.title}}</h2>
+  <h3>講義の目的と内容</h3>
+  <h4>{{post.pursose}}</h4>
+  <h3>授業の到達目標</h3>
+  <h4>{{post.terget}}</h4>
+  <h3>授業計画</h3>
+  <h4>{{post.course|linebreaksbr}}</h4>
+  <h3>テキスト・参考書</h3>
+  <h4>{{post.textbook}}</h4>
+  <h3>評価方法・基準</h3>
+  <h4>{{post.evaluation}}</h4>
+
+</div>
+
+<a href="/" class="back">
+  <div>トップ画面へ</div>
+</a>
+{% endblock %}

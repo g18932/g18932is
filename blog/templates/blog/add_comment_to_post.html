@@ -1,0 +1,9 @@
+{% extends 'blog/chat-home.html' %}
+
+{% block content %}
+    <h3>新規コメント</h3>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">コメントする</button>
+    </form>
+{% endblock %}

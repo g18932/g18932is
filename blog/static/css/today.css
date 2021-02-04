@@ -1,0 +1,157 @@
+body {
+    margin:0;
+    margin-bottom:5%;
+}
+a {
+    color:#696969;
+}
+a:hover {
+    text-decoration:none;
+    color:#343434;
+}
+
+.page-header {
+    background-color:black;
+    margin-top:0;
+}
+/*
+.page-header:hover{
+    opacity:0.8;
+}*/
+.page-header a{
+    text-decoration:none;
+}
+.title {
+    font-size:50px;
+    background-color:black;
+    color:white;
+    padding-left:5%;
+    padding-top:55px;
+    padding-bottom:15px;
+    white-space: nowrap;
+    font-family:'Carter One';
+}
+.back {
+    display:inline-block;
+    border-radius: 0.4em;
+    margin-bottom:15px;
+    border: 2px solid;
+    color:black;
+    padding:5px 7px;
+    /*margin-left:85%;*/
+    float:right;
+}
+.back:hover{
+    color:a9a9a9;
+    text-decoration:none;
+}
+.content container{
+    margin-left:5%;  
+}
+
+.today_span {
+    font-weight:bolder;
+    background: linear-gradient(transparent 70%, rgb(119, 195, 223) 70%);
+    display:inline;
+    font-family:'Carter One';
+    padding:0;
+}
+
+.today_post1 {
+    border:solid #808080;
+    padding:8px;
+    margin:20px 0 5px 0;
+    background-color:#dcdcdc;
+    width:600px;
+}
+.today_post2 {
+    border:solid #808080;
+    padding:8px;
+    margin:5px 0;
+    background-color:#dcdcdc;
+    width:600px;
+}
+
+.today_post3 {
+    border:solid #808080;
+    padding:8px;
+    margin:5px 0;
+    background-color:#dcdcdc;
+    width:600px;
+}
+
+.today_post4 {
+    border:solid #808080;
+    padding:8px;
+    margin:5px 0;
+    background-color:#dcdcdc;
+    width:600px;
+}
+
+.today_post5 {
+    border:solid #808080;
+    padding:8px;
+    margin:5px 0;
+    background-color:#dcdcdc;
+    width:600px;
+}
+h2 {
+    margin-top:0px;
+    font-size:18px;
+    color:#696969;
+}
+
+.today_week {
+    font-size:20px;
+    width:600px;
+    text-align:center;
+    font-family:'Raleway';
+}
+
+/*detail*/
+.detail_title {
+    font-size:30px;
+    margin-top:25px;
+    font-weight:bolder;
+    padding: 1rem 2rem;
+    border-left: 4px solid rgb(119, 195, 223);
+    color:#343434;
+}
+.mail {
+    margin-left:10px;
+    margin-bottom:30px;
+}
+.mail p{
+    font-size:15px;
+    margin:0px;
+    
+}
+.today_box {
+    border:solid #808080;
+    padding:8px;
+    margin:5px 0;
+    width:600px;
+    color:#343434;
+    background-color:whitesmoke;
+}
+.today_box:hover {
+    background-color:#dcdcdc;
+}
+h3 {
+    font-size:18px;
+}
+
+.cloudbox {
+    display:inline-block;
+    border: 2px solid;
+    border-radius: 0.4em;
+    padding:10px;
+    text-align:center;
+    justify-content: center;
+    margin:10px;
+}
+.cloud {
+    font-size:15px;
+    font-weight:bolder;
+}
+

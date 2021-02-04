@@ -1,0 +1,21 @@
+{% extends 'blog/base_chat.html' %}
+{% block content %}
+
+<a href="{% url 'chat_top' %}" class="back">
+  戻る
+</a>
+
+<div class="post">
+  <h2>{{ post.title }}</h2>
+  <a href="{% url 'post_new' %}"><span class="glyphicon glyphicon-plus">新規投稿</span></a> 
+  {% for chatpost in chatposts %}
+  <h3><a href="{% url 'chat_detail' pk=chatpost.pk %}">{{ chatpost.title }}</a></h3>
+  <p>{{ chatpost.published_date }}</p>
+  <p class="chattext">{{ chatpost.text|linebreaksbr }}</p>
+  <a href="{% url 'chat_detail' pk=chatpost.pk %}">
+    コメント: {{ chatpost.comment1s.count }}
+  </a>
+</div>
+{% endfor %}
+{% endblock %}
+

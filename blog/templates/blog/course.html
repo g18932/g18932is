@@ -1,0 +1,333 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<a href="{% url 'index' %}" class="back">
+  戻る
+</a>
+
+<h1>Register</h1>
+<div class="tab_wrap">
+  <input id="tab1" type="radio" name="tab_btn" checked>
+  <input id="tab2" type="radio" name="tab_btn">
+  <input id="tab3" type="radio" name="tab_btn">
+  <input id="tab4" type="radio" name="tab_btn">
+  
+  <div class="tab_area">
+    <label class="tab1_label" for ="tab1">１ターム</label>
+    <label class="tab2_label" for ="tab2">２ターム</label>
+    <label class="tab3_label" for ="tab3">３ターム</label>
+    <label class="tab4_label" for ="tab4">４ターム</label>
+  </div>
+  <div class="panel_area">
+    <div id="panel1" class="tab_panel">
+      <table border="3" width="600px" height="500px" cellspacing="0" cellpadding="5" bordercolor="#333333" bgcolor="#fff">
+	<tr>
+	  <th> </th>
+	  <th><form action="{% url 'post_list' %}"><input id="next" type="submit" value="月" class="button"></form></th>
+	  <th><form action="{% url 'post_list2' %}"><input id="next" type="submit" value="火" class="button"></form></th>
+	  <th><form action="{% url 'post_list3' %}"><input id="next" type="submit" value="水" class="button"></form></th>
+	  <th><form action="{% url 'post_list4' %}"><input id="next" type="submit" value="木" class="button"></form></th>
+	  <th><form action="{% url 'post_list5' %}"><input id="next" type="submit" value="金" class="button"></form></th>
+	  
+	</tr>
+	<tr>
+	  <th>1限</th>
+	  <th>
+	    {% for post in post %}
+	    {% if post.regi == "1" %}
+	    {% if post.time == "1" %}
+	    <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }} </a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post2 in post2 %}
+	    {% if post2.regi == "1" %}
+	    {% if post2.time == "1" %}
+	    <a href="{% url 'post_detail2' pk=post2.pk %}">{{ post2.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post3 in post3 %}
+	    {% if post3.regi == "1" %}
+	    {% if post3.time == "1" %}
+	    <a href="{% url 'post_detail3' pk=post3.pk %}">{{ post3.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post4 in post4 %}
+	    {% if post4.regi == "1" %}
+	    {% if post4.time == "1" %}
+	    <a href="{% url 'post_detail4' pk=post4.pk %}">{{ post4.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post5 in post5 %}
+	    {% if post5.regi == "1" %}
+	    {% if post5.time == "1" %}
+	    <a href="{% url 'post_detail5' pk=post5.pk %}">{{ post5.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	</tr>
+	<tr>
+	  <th>2限</th>
+	  <th>
+	    {% for post in post %}
+	    {% if post.regi == "1" %}
+	    {% if post.time == "2" %}
+	    <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post2 in post2 %}
+	    {% if post2.regi == "1" %}
+	    {% if post2.time == "2" %}
+	    <a href="{% url 'post_detail2' pk=post2.pk %}">{{ post2.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post3 in post3 %}
+	    {% if post3.regi == "1" %}
+	    {% if post3.time == "2" %}
+	    <a href="{% url 'post_detail3' pk=post3.pk %}">{{ post3.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post4 in post4 %}
+	    {% if post4.regi == "1" %}
+	    {% if post4.time == "2" %}
+	    <a href="{% url 'post_detail4' pk=post4.pk %}">{{ post4.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post5 in post5 %}
+	    {% if post5.regi == "1" %}
+	    {% if post5.time == "2" %}
+	    <a href="{% url 'post_detail5' pk=post5.pk %}">{{ post5.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	</tr>
+	<tr>
+	  <th>3限</th>
+	  <th>
+	    {% for post in post %}
+	    {% if post.regi == "1" %}
+	    {% if post.time == "3" %}
+	    <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post2 in post2 %}
+	    {% if post2.regi == "1" %}
+	    {% if post2.time == "3" %}
+	    <a href="{% url 'post_detail2' pk=post2.pk %}">{{ post2.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post3 in post3 %}
+	    {% if post3.regi == "1" %}
+	    {% if post3.time == "3" %}
+	    <a href="{% url 'post_detail3' pk=post3.pk %}">{{ post3.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post4 in post4 %}
+	    {% if post4.regi == "1" %}
+	    {% if post4.time == "3" %}
+	    <a href="{% url 'post_detail4' pk=post4.pk %}">{{ post4.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post5 in post5 %}
+	    {% if post5.regi == "1" %}
+	    {% if post5.time == "3" %}
+	    <a href="{% url 'post_detail5' pk=post5.pk %}">{{ post5.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	</tr>
+	<tr>
+	  <th>4限</th>
+	  <th>
+	    {% for post in post %}
+	    {% if post.regi == "1" %}
+	    {% if post.time == "4" %}
+	    <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post2 in post2 %}
+	    {% if post2.regi == "1" %}
+	    {% if post2.time == "4" %}
+	    <a href="{% url 'post_detail2' pk=post2.pk %}">{{ post2.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post3 in post3 %}
+	    {% if post3.regi == "1" %}
+	    {% if post3.time == "4" %}
+	    <a href="{% url 'post_detail3' pk=post3.pk %}">{{ post3.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post4 in post4 %}
+	    {% if post4.regi == "1" %}
+	    {% if post4.time == "4" %}
+	    <a href="{% url 'post_detail4' pk=post4.pk %}">{{ post4.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post5 in post5 %}
+	    {% if post5.regi == "1" %}
+	    {% if post5.time == "4" %}
+	    <a href="{% url 'post_detail5' pk=post5.pk %}">{{ post5.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	</tr>
+	<tr>
+	  <th>5限</th>
+	  <th>
+	    {% for post in post %}
+	    {% if post.regi == "1" %}
+	    {% if post.time == "5" %}
+	    <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post2 in post2 %}
+	    {% if post2.regi == "1" %}
+	    {% if post2.time == "5" %}
+	    <a href="{% url 'post_detail2' pk=post2.pk %}">{{ post2.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post3 in post3 %}
+	    {% if post3.regi == "1" %}
+	    {% if post3.time == "5" %}
+	    <a href="{% url 'post_detail3' pk=post3.pk %}">{{ post3.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post4 in post4 %}
+	    {% if post4.regi == "1" %}
+	    {% if post4.time == "5" %}
+	    <a href="{% url 'post_detail4' pk=post4.pk %}">{{ post4.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	  <th>
+	    {% for post5 in post5 %}
+	    {% if post5.regi == "1" %}
+	    {% if post5.time == "5" %}
+	    <a href="{% url 'post_detail5' pk=post5.pk %}">{{ post5.title }}</a>
+	    <br>
+	    {% endif %}
+	    {% endif %}
+	    {% endfor %}
+	  </th>
+	</tr>
+      </table>
+      <br>
+      <script>
+	var a = 0
+	function OnLinkClick() {
+	    
+	    if(a == 0) {
+		alert("１コマにつき１つの授業しか選択することはできません")
+		a=1;
+	    }
+	    else if(a == 1){
+		window.open("/");
+	    }
+  
+  }
+      </script>
+
+      <a href="javascript:OnLinkClick();" class="back">
+   決定
+</a>
+      
+
+    </div>
+    <div id="panel2" class="tab_panel">
+      <p>panel2</p>
+    </div>
+    <div id="panel3" class="tab_panel">
+      <p>panel3</p>
+    </div>
+    <div id="panel4" class="tab_panel">
+      <p>panel4</p>
+    </div>
+  </div>
+</div>
+      
+{% endblock %}

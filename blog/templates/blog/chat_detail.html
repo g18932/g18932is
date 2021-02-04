@@ -1,0 +1,24 @@
+{% extends 'blog/base_chat.html' %}
+{% block content %}
+
+  <div class="post">
+    {% if chatpost.published_date %}
+      <div class="date">
+        {{ chatpost.published_date }}
+      </div>
+    {% endif %}
+    <h2>{{ chatpost.title }}</h2>
+    <p>{{ chatpost.text|linebreaksbr }}</p>
+  </div>
+  <hr>
+  <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=chatpost.pk %}">コメントする</a>
+  {% for comment1 in chatpost.comment1s.all %}
+    <div class="comment">
+      <div class="date">{{ comment1.created_date }}</div>
+      <strong>{{ comment1.author }}</strong>
+      <p>{{ comment1.text|linebreaks }}</p>
+    </div>
+  {% empty %}
+    <p>コメントはありません</p>
+  {% endfor %}
+{% endblock %}

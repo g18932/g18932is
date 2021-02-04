@@ -1,0 +1,116 @@
+a {
+    text-decoration: none;
+}
+
+.page-header {
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+.page-header h1 a:active {
+    box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+    transform: translateY(-4px);
+}
+
+#wrap {
+    margin-right: auto;
+    margin-left: auto;
+    width: 940px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 1px;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:visited {
+    color: #000000;
+    float: right;
+    font-size: 20pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #FCB8D0;
+    border: 1px solid #FFD4F2;
+    text-decoration: none;
+}
+
+.top-menu:hover {
+    box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+    transform: translateY(-4px);
+    transition: .3s;
+    text-decoration: none;
+}
+
+.post {
+    margin-bottom: 70px;
+    margin-top: 30px;
+    padding: 10px 10px 10px 10px;
+    background-color: #FCFCB8;
+    border: 1px solid #F3F09B;
+    transition: .3s;
+}
+
+.post:hover {
+    box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+    transform: translateY(-4px);
+}
+
+.post h2 a, .post h2 a:visited {
+    color: #000000;
+}
+
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+
+.class {
+    background-color: #DCFFC7;
+    border: 1px solid #D9EAD3;
+    padding: 10px;
+    color: #000000;
+    margin: 30px;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.class:active {
+    box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+    transform: translateY(1px);
+}
+
+.class:hover {
+    box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+    transform: translateY(-4px);
+    transition: .3s;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+

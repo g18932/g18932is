@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+ <div>
+  <a href="{% url 'post_list4' %}" class="back">
+    授業一覧に戻る
+  </a>
+  <a href="{% url 'course' %}" class="back">
+    時間割に戻る
+  </a>
+</div>
+<div class="post">
+  <div style="display:inline-flex" class="sel_del">
+    <form action="{% url 'select4' pk=post4.pk %}" method="POST">
+      {% csrf_token %}
+      <input class="submit" type="submit" value="選択">
+    </form>
+    <form action="{% url 'delete4' pk=post4.pk %}" method="POST">
+      {% csrf_token %}
+      <input class="submit" type="submit" value="削除">
+    </form>
+  </div>
+   <h2>{{post4.title}}</h2>
+   <h3>講義の目的と内容</h3>
+   <h4>{{post4.pursose}}</h4>
+   <h3>授業の到達目標</h3>
+   <h4>{{post4.terget}}</h4>
+  <h3>授業計画</h3>
+  <h4>{{post4.course|linebreaksbr}}</h4>
+  <h3>テキスト・参考書</h3>
+  <h4>{{post4.textbook}}</h4>
+  <h3>評価方法・基準</h3>
+  <h4>{{post4.evaluation}}</h4>
+  
+</div>
+{% endblock %}
+

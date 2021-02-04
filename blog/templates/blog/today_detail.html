@@ -1,0 +1,32 @@
+{% extends 'blog/base2.html' %}
+{% block content %}
+
+<a href="{% url 'today_top' %}" class="back">
+  戻る
+</a>
+<h2 class="detail_title">{{post.title}}</h2>
+<div class="mail">
+  <p>{{post.text}} （ {{post.t_mail}} ）</p>
+</div>
+<a href="{{post.subjecturl}}">
+  <div class="today_box">
+    <h3>授業URL</h3>
+  </div>
+</a>
+<a href="{{post.homework}}">
+  <div class="today_box">
+    <h3>課題提出サイト</h3>
+  </div>
+</a>
+
+<a href="{% url 'syllabus' pk=post.pk %}">
+  <div class="today_box">
+    <h3>シラバス</h3>
+  </div>
+</a>
+
+
+<a href="/" class="back">
+  <div>トップ画面へ</div>
+</a>
+{% endblock %}

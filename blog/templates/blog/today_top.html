@@ -1,0 +1,129 @@
+{% extends 'blog/base2.html' %}
+{% block content %}
+
+<a href="{% url 'index' %}" class="back">
+  戻る
+</a>
+
+<h1 class="today_span">
+  Today
+</h1>
+<br>
+<div class="today_week">
+  <span> - </span>
+  <script type="text/javascript">
+    weeks();
+  </script>
+  <span> - </span>
+</div>
+
+<div class="today_post1">
+  <p>１限</p>
+  <h2>
+  {% for post in post %}
+  {% if post.regi == "1" %}
+  {% if post.time == "1" %}
+  <a href="{% url 'today_detail' pk=post.pk %}">
+    {{ post.title }}
+  </a>
+  <br>
+  {% endif %}
+  {% endif %}
+  {% endfor %}
+</h2>
+</div>
+
+<div class="today_post2">
+  <p>２限</p>
+  <h2>
+    {% for post in post %}
+    {% if post.regi == "1" %}
+    {% if post.time == "2" %}
+    <a href="{% url 'today_detail' pk=post.pk %}">{{ post.title }}</a>
+    <br>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </h2>
+</div>
+<div class="today_post3">
+  <p>３限</p>
+  <h2>
+    {% for post in post %}
+    {% if post.regi == "1" %}
+    {% if post.time == "3" %}
+    <a href="{% url 'today_detail' pk=post.pk %}">{{ post.title }}</a>
+    <br>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </h2>
+</div>
+<div class="today_post4">
+  <p>４限</p>
+  <h2>
+    {% for post in post %}
+    {% if post.regi == "1" %}
+    {% if post.time == "4" %}
+    <a href="{% url 'today_detail' pk=post.pk %}">{{ post.title }}</a>
+    <br>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </h2>
+</div>
+<div class="today_post5">
+  <p>５限</p>
+  <h2>
+    {% for post in post %}
+    {% if post.regi == "1" %}
+    {% if post.time == "5" %}
+    <a href="{% url 'today_detail' pk=post.pk %}">{{ post.title }}</a>
+    <br>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </h2>
+</div>
+
+<a href="https://sites.google.com/tsuda.ac.jp/online-class-timetable/archives?authuser=0">
+  <div class="cloudbox">
+    <p class="cloud">過去のクラウド録画</p>
+    <p class="cloud_mini">2週間以内に行われた授業のみ</p>
+  </div>
+</a>
+
+<a href="/" class="back">
+  <div>トップ画面へ</div>
+</a>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var day = new Date();
+  var hour = day.getHours() * 100;
+  var minute = day.getMinutes();
+  var hm = hour + minute;
+  if(840 <= hm && hm <= 1020){
+   $('.today_post1').css('background-color','#ffe6f7');
+   $('.today_post1').css('border-color','#333');
+  }
+  if(1020 < hm && hm <= 1200){	
+   $('.today_post2').css('background-color','#ffe6f7');
+   $('.today_post2').css('border-color','#333');
+  }
+  if(1200 < hm && hm <= 1430){
+   $('.today_post3').css('background-color','#ffe6f7');
+   $('.today_post3').css('border-color','#333');
+  }
+  if(1430 < hm && hm <= 1610) {	
+   $('.today_post4').css('background-color','#ffe6f7');
+   $('.today_post4').css('border-color','#333');
+  }
+  if(1610 < hm && hm <= 1750) {
+   $('.today_post5').css('background-color','#ffe6f7');
+   $('.today_post5').css('border-color','#333');
+  }
+});
+</script>
+{% endblock %}

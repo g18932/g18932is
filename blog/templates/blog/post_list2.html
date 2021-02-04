@@ -1,0 +1,58 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<a href="/course" class="back">
+   戻る
+</a>
+<br>
+<h1>１限</h1>
+{% for post2 in post2s %}
+{% if post2.time == "1" %}
+<div class="post">
+  <h2><a href="{% url 'post_detail2' pk=post2.pk %}">{{ post2.title }}</a></h2>
+  <p>{{ post2.text|linebreaksbr }}</p>
+</div>
+{% endif %}
+{% endfor %}
+<br>
+<h1>２限</h1>
+{% for post2 in post2s %}
+{% if post2.time == "2" %}
+<div class="post">
+  <h2><a href="{% url 'post_detail2' pk=post2.pk %}">{{ post2.title }}</a></h2>
+  <p>{{ post2.text|linebreaksbr }}</p>
+</div>
+{% endif %}
+{% endfor %}
+<br>
+<h1>３限</h1>
+{% for post2 in post2s %}
+{% if post2.time == "3" %}
+<div class="post">
+  <h2><a href="{% url 'post_detail2' pk=post2.pk %}">{{ post2.title }}</a></h2>
+  <p>{{ post2.text|linebreaksbr }}</p>
+</div>
+{% endif %}
+{% endfor %}
+<br>
+<h1>４限</h1>
+{% for post2 in post2s %}
+{% if post2.time == "4" %}
+<div class="post">
+  <h2><a href="{% url 'post_detail2' pk=post2.pk %}">{{ post2.title }}</a></h2>
+  <p>{{ post2.text|linebreaksbr }}</p>
+</div>
+{% endif %}
+{% endfor %}
+<br>
+<h1>５限</h1>
+{% for post2 in post2s %}
+{% if post2.time == "4" %}
+<div class="post">
+  <h2><a href="{% url 'post_detail2' pk=post2.pk %}">{{ post2.title }}</a></h2>
+  <p>{{ post2.text|linebreaksbr }}</p>
+</div>
+{% endif %}
+{% endfor %}
+<br>
+{% endblock %}

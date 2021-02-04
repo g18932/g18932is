@@ -1,0 +1,292 @@
+body {
+    margin:0;
+    margin-bottom:5%;
+}
+
+.page-header {
+    background-color:black;
+    margin-top:0;
+}
+/*
+.page-header:hover{
+    opacity:0.8;
+}*/
+.page-header a{
+        text-decoration:none;
+}
+.title {
+    font-size:50px;
+    background-color:black;
+    color:white;
+    padding-left:5%;
+    padding-top:55px;
+    padding-bottom:15px;
+    white-space: nowrap;
+    font-family:'Carter One';
+}
+.back {
+    display:inline-block;
+    border-radius: 0.4em;
+    margin-bottom:15px;
+    border: 2px solid;
+    color:black;
+    padding:5px 7px;
+    /*margin-left:85%;*/
+    float:right;
+}
+.back:hover{
+    color:a9a9a9;
+    text-decoration:none;
+}
+.content container{
+    margin-left:5%;
+}
+h1 {
+    font-weight:bolder;
+}
+h1 a{
+    font-weight:bolder;
+     background: linear-gradient(transparent 70%, rgb(119, 195, 223) 70%);
+     color: black;
+}
+h1 a:hover {
+    text-decoration: none;
+     color: #888888;
+}
+.post{
+       
+}
+.post h2 {
+    font-weight:bolder;
+    padding: 1rem 2rem;
+    border-left: 4px solid rgb(119, 195, 223);
+    color: black;
+}
+
+.post h3 {
+    font-size:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    position: relative;
+    padding-left: 25px;
+}
+.post h4 {
+    letter-spacing:0.6px;
+    line-height:1.2em;
+}
+h3:before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px rgb(119, 195, 223);
+}
+h3:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px rgb(119, 195, 223);
+}
+.post h4 {
+    padding: 20px;
+}
+
+
+
+
+
+
+h1 {
+    font-weight:bolder;
+    background: linear-gradient(transparent 70%, rgb(119, 195, 223) 70%);
+    display:inline;
+    font-family:'Carter One';
+}
+
+.button {
+  display       : inline-block;
+  font-size     : 15pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 8px 8px;   /* 余白       */
+  background    : #fff;     /* 背景色     */
+  color         : #000;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  border: none;
+  border-bottom:solid;
+  border-color:rgb(119, 195, 223);
+  outline:none;
+}
+.button:hover {
+    color         : #c0c0c0;     /* 文字色     */
+    background    : #ffffff;     /* 背景色     */
+}
+
+th {
+    text-align:center;
+    width:16.6%;
+    font-size:15px;
+}
+
+th form{
+    margin:0;
+}
+
+th a {
+    color:#000;
+}
+th a:hover {
+    text-decoration:none;
+    color:#c0c0c0;
+    opacipy:0.8;
+}
+.tab_wrap{
+    width:100%;
+    margin:20px 0;
+}
+input[type="radio"]{
+    display:none;
+}
+.tab_area{
+    font-size:0;
+    margin:0 0px;
+}
+.tab_area label{
+    width:100px;
+    margin:0 2px;
+    display:inline-block;
+    padding:12px 0;
+    color:#fff;
+    background:#000;
+    text-align:center;
+    font-size:13px;
+    cursor:pointer;
+    transition:ease 0.2s opacity;
+}
+.tab_area label:hover{
+    opacity:0.5;
+}
+
+.tab_panel{
+    width:100%;
+   
+    padding:0;
+    display:none;
+}
+.tab_panel p{
+    font-size:14px; letter-spacing:1px; text-align:center;
+}
+ 
+#tab1:checked ~ .tab_area .tab1_label{background:#a9a9a9; color:#fff;}
+#tab1:checked ~ .panel_area #panel1{display:block;}
+#tab2:checked ~ .tab_area .tab2_label{background:#a9a9a9; color:#fff;}
+#tab2:checked ~ .panel_area #panel2{display:block;}
+#tab3:checked ~ .tab_area .tab3_label{background:#a9a9a9; color:#fff;}
+#tab3:checked ~ .panel_area #panel3{display:block;}
+#tab4:checked ~ .tab_area .tab4_label{background:#a9a9a9; color:#fff;}
+#tab4:checked ~ .panel_area #panel4{display:block;}
+
+.table {
+    background-color:#fff;
+}
+.sel_del {
+
+}
+
+.select {
+    font-size:20px;
+    font-weight:bolder;
+}
+.submit {
+    font-size     : 12pt;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 7px;
+    background    : #999999;
+    color         : #ffffff;
+    display:inline-block;
+    border-radius: 0.4em;
+    margin-bottom:15px;
+    border: 2px solid;
+}
+.submit:hover {
+    color:#999999;
+    background-color:#fff;
+    text-decoration:none;
+}
+
+.select_back {
+    display:inline-block;
+    border-radius: 0.4em;
+    margin-bottom:15px;
+    border: 2px solid;
+    color:black;
+    padding:5px 7px;
+}
+.select_back:hover{
+    color:a9a9a9;
+    text-decoration:none;
+}
+
+
+/*chat*/
+.class {
+    background-color: #666666;
+    border: 1px solid #D9EAD3;
+    padding: 10px;
+    color: black;
+    margin: 30px;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.class:active {
+    box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+    transform: translateY(1px);
+}
+
+.class:hover {
+    box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+    transform: translateY(-4px);
+    transition: .3s;
+    text-decoration: none;
+}
+
+.chat_box {
+    border:solid #808080;
+    padding:10px;
+    margin: 10px;
+    width:600px;
+    color:#343434;
+    font-size: 20px;
+    background-color:whitesmoke;
+    text-align: center;
+    text-decoration: none;
+}
+.chat_box:hover {
+    background-color:#dcdcdc;
+}
+a {
+    color: #696969;
+}
+a:hover {
+    text-decoration:none;
+    color:#343434;
+}
+.chat {
+    margin-top:15px;
+}
+.chattext {
+    border: 1px solid;
+    padding: 10px;
+}
+

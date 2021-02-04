@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Carter+One|Kosugi+Maru' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  </head>
+  <body>
+
+    <div class="page-header">
+      <p class="title">Umeco<span style="font-size:25px; font-family:'Kosugi Maru'"> 〜オンライン授業をサポート〜</span></p>
+    </div>
+
+    
+    <div id="wrap">
+      <div class="box">
+	<a href="{% url 'today_top' %}">
+	  <div class="choice1">Today</div>
+	</a>
+	<a href="{% url 'week_top' %}">
+	  <div class="choice1">Week</div>
+	</a>
+	<a href="{% url 'chat_top' %}">
+	  <div class="choice1">Chat</div>
+	</a>
+	<a href="{% url 'course' %}">
+	  <div class="choice1">Register</div>
+	</a>
+      </div>
+    </div>
+      
+
+
+    <div class="out">
+      <img src="{%static 'media/no1.jpg' %}">
+      <input type=radio name="slide" id="slide1">
+      <input type=radio name="slide" id="slide2">
+      <input type=radio name="slide" id="slide3">
+      <input type=radio name="slide" id="slide4">
+      <div class="in">
+        <label for="slide1"><span></span><img src="{%static 'media/no1.jpg' %}"></label>
+        <label for="slide2"><span></span><img src="{%static 'media/no2.jpg' %}"></label>
+        <label for="slide3"><span></span><img src="{%static 'media/no3.jpg' %}"></label>
+        <label for="slide4"><span></span><img src="{%static 'media/no4.jpg' %}"></label>
+      </div>
+    </div>
+
+    <div class="news">
+      <div class="boxNews">
+	<p>NEWS</p>
+      </div>
+      <div class="boxNews2">
+	<p>○月×日(月)ネットワークシステム休講</p>
+      </div>
+    </div>
+
+      <a href="">
+	<div class="reset">履修リセット</div>
+      </a>
+  </body>
+</html>
